@@ -25,7 +25,7 @@ class LaravelToastr
 
     public function error($message = null): static
     {
-        return $this->toast($message, 'danger');
+        return $this->toast($message, 'error');
     }
 
     public function warning($message = null): static
