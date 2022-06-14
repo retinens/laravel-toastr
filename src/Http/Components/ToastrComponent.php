@@ -12,13 +12,13 @@ class ToastrComponent extends Component
 
     public function __construct()
     {
-        $this->xPosition = config('bootstrap-toasts.position_x', 'end');
-        $this->yPosition = config('bootstrap-toasts.position_y', 'bottom');
-        $this->autoHide = config('bootstrap-toasts.auto_hide', true);
+        $this->xPosition = config('toastr.position_x', 'end');
+        $this->yPosition = config('toastr.position_y', 'bottom');
+        $this->autoHide = config('toastr.auto_hide', true);
     }
 
     public function render()
     {
-        return view('bootstrap-toasts::message');
+        return view('toastr::message');
     }
 }

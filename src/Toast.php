@@ -16,7 +16,7 @@ class Toast implements ArrayAccess
 
     public function __construct(array $attributes = [])
     {
-        $this->autoHide = config('bootstrap-toasts.auto_hide', true);
+        $this->autoHide = config('toastr.auto_hide', true);
         $this->update($attributes);
     }
 
