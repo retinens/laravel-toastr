@@ -23,7 +23,7 @@ class LaravelToastrServiceProvider extends PackageServiceProvider
 
         Blade::component(ToastrComponent::class, 'toastr');
 
-        $this->app->singleton('bootstrap-toaster', function () {
+        $this->app->singleton('toastr', function () {
             return $this->app->make(LaravelToastr::class);
         });
     }
