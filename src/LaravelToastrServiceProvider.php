@@ -18,7 +18,7 @@ class LaravelToastrServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('laravel-toastr')
-            ->hasConfigFile()
+            ->hasConfigFile("toastr")
             ->hasViews();
 
         Blade::component(ToastrComponent::class, 'toastr');

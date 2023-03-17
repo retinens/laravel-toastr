@@ -2,6 +2,8 @@
 
 namespace Retinens\LaravelToastr\Http\Components;
 
+
+use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
 class ToastrComponent extends Component
@@ -17,7 +19,7 @@ class ToastrComponent extends Component
         $this->autoHide = config('toastr.auto_hide', true);
     }
 
-    public function render()
+    public function render(): View
     {
         return view('toastr::message');
     }

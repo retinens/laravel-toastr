@@ -5,7 +5,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/retinens/laravel-toastr/Check%20&%20fix%20styling?label=code%20style)](https://github.com/retinens/laravel-toastr/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/retinens/laravel-toastr.svg?style=flat-square)](https://packagist.org/packages/retinens/laravel-toastr)
 
-This package provides an easy interface for using Bootstrap 5.2+ toast messages in a Laravel app.
+This package provides an easy interface for using Toastr.js messages in your Laravel app.
 
 ## Installation
 
@@ -59,7 +59,7 @@ window.bootstrap = require("bootstrap");
 First, include this snippet in your Blade template
 
 ```html
-<x-boostrap-toastr/>
+<x-toastr/>
 ```
 
 Then, in your controller, call the `toast()` method to create a toast message.
