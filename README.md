@@ -50,44 +50,52 @@ php artisan vendor:publish --tag="laravel-toastr-views"
 
 ## Usage
 
-Bootstrap should be imported in your assets and available in the window variable.
+Toastr should be imported in your assets and available in the window variable.
+
+For example, in your `app.js` file:
 
 ```js
-window.bootstrap = require("bootstrap");
+import * as toastr from 'toastr'
+window.toastr = toastr
 ```
 
-First, include this snippet in your Blade template
+```scss
+@import '~toastr/build/toastr.scss';
+```
+
+
+Include the component in your blade base template, after all the scripts.
 
 ```html
 <x-toastr/>
 ```
 
-Then, in your controller, call the `toast()` method to create a toast message.
+Then, in your controller, call the `toastr()` method to create a toast message.
 
 ```php
-public function edit()
+public function update()
 {
-    toast('Post edited!');
-    return redirect(route('posts.list'));
+    //do stuff
+    toastr('Post edited!');
+    return redirect(route('posts.index'));
 }
 ```
 
 The toast method accepts the title and level as optional arguments :
 
 ```php
-toast('message','level','title')
+toastr('message','level','title')
 ```
 
 There are a few quick methods to modify the toast:
 
-- `toast('Message')->success()`: Set the toast level as "success".
-- `toast('Message')->info()`: Set the toast level as "info".
-- `toast('Message')->error()`: Set the toast level as "danger".
-- `toast('Message')->warning()`: Set the toast level as "warning".
+- `toastr()->success('Message')`: Set the toast level as "success".
+- `toastr()->info('Message')`: Set the toast level as "info".
+- `toastr()->error('Message')`: Set the toast level as "danger".
+- `toastr()->warning('Message')`: Set the toast level as "warning".
 
 
-- `toast('Message')->title("Toast title")`: Set the toast title.
-- `toast('Message')->important()`: Add a close button to the toast.
+- `toastr()->title('Message',"Toast title")`: Set the toast title.
 
 ## Changelog
 
