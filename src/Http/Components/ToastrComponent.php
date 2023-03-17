@@ -2,7 +2,6 @@
 
 namespace Retinens\LaravelToastr\Http\Components;
 
-
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
