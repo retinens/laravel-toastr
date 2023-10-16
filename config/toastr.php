@@ -5,6 +5,7 @@ return [
      * Defines the default auto_hide parameter
      */
     'auto_hide' => false,
+    'script_type' => 'text/javascript',
 
     /*
      * Defines the position of the toast on the window
